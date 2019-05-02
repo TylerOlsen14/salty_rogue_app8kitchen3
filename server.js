@@ -25,15 +25,15 @@ mongoose
   //use routes
 app.use('/', record)
 
-// Serve static assets if in production
-if(process.env.NODE_ENV === 'production') {
-  // Set static folder
-  app.use(express.static('client/build'));
+// // Serve static assets if in production
+// if(process.env.NODE_ENV === 'production') {
+//   // Set static folder
+//   app.use(express.static('client/build'));
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')); // path for resolving the front end, IF it's not going for the api
-  })
-}
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')); // path for resolving the front end, IF it's not going for the api
+//   })
+// }
 
   const port = process.env.PORT || 5001;
 
